@@ -1,0 +1,70 @@
+<view class="detail-container" >
+<view class="content"   bind:tap="authTap">
+<swiper indicator-dots="{{false}}" autoplay="{{false}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#00000030'   indicator-active-color="#000000"   autoplay="{{false}}"  circular="{{false}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"  bindtap="previewImgTap"  data-currenturl="{{baseURL + item}}"  wx:key="index">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">课程名称：</view>
+<view class="detail-item-text">{{detailList.kechengmingcheng}}</view>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">学号：</view>
+<view class="detail-item-text">{{detailList.xuehao}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">学生姓名：</view>
+<view class="detail-item-text">{{detailList.xueshengxingming}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">班级：</view>
+<view class="detail-item-text">{{detailList.banji}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">打卡时间：</view>
+<view class="detail-item-text">{{detailList.dakashijian}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<view class="operate-box">
+
+
+
+
+
+
+
+
+</view>
+
+</view>
+
+
+
+
+</view>

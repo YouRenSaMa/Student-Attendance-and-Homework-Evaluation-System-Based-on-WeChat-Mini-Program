@@ -1,0 +1,36 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">作业名称</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.zuoyemingcheng==true}}"  placeholder="作业名称" model:value="{{zuoyemingcheng}}" />
+</view>
+<view class="item-box"    bindtap="uploadfengmian">
+<view   class="item-label">封面</view>
+<image  src="{{fengmianPath?fengmianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box"  >
+<view class="item-label">截止提交时间</view>
+<view class="down-item-picker"  bindtap="onreversetimeTap">
+<view class="item-input" >{{reversetime}}</view>
+</view>
+</view>
+<com-date isShowPicker="{{showreversetime}}" bind:dateHandler="reversetimeTap"></com-date>
+<view class="item-box"  >
+<view class="item-label">作业内容</view>
+<com-edit class="item_edit"> </com-edit>
+</view>
+
+</view>
+
+
+<view class="btn-box">
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

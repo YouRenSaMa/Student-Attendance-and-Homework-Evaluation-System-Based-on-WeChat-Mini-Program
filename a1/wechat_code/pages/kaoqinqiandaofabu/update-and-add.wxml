@@ -1,0 +1,37 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">课程名称</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.kechengmingcheng==true}}"  placeholder="课程名称" model:value="{{kechengmingcheng}}" />
+</view>
+<view class="item-box"  >
+<view class="item-label">打卡时间</view>
+<view class="down-item-picker"  bindtap="ondakashijianTap">
+<view class="item-input" >{{dakashijian}}</view>
+</view>
+</view>
+<com-date isShowPicker="{{showdakashijian}}" bind:dateHandler="dakashijianTap"></com-date>
+<view class="item-box">
+<view class="item-label">规则</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.guize==true}}"  placeholder="规则" model:value="{{guize}}" />
+</view>
+<view class="item-box"    bindtap="uploadkechengtupian">
+<view   class="item-label">课程图片</view>
+<image  src="{{kechengtupianPath?kechengtupianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+
+</view>
+
+
+<view class="btn-box">
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

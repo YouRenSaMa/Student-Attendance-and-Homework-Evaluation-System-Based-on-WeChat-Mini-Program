@@ -1,0 +1,33 @@
+<view class="register-container">
+<view class="content">
+<view class="userInfo-from">
+    <view class="item-box" wx:if="{{tableName=='xuesheng'}}"  >
+        <view class="item-label">学号</view>
+        <input  class="item-input" type="text"    disabled="true" placeholder="学号" model:value="{{xuehao}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='xuesheng'}}"  >
+        <view class="item-label">学生姓名</view>
+        <input  class="item-input" type="text"    placeholder="学生姓名" model:value="{{xueshengxingming}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='xuesheng'}}"  >
+        <view class="item-label">学生手机</view>
+        <input  class="item-input" type="text"    placeholder="学生手机" model:value="{{xueshengshouji}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='xuesheng'}}"  >
+        <view class="item-label">班级</view>
+        <input  class="item-input" type="text"    placeholder="班级" model:value="{{banji}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='xuesheng'}}" >
+        <view  class="item-label"   bindtap="touxiangTap"  >头像</view>
+        <image class="item-img"   bindtap="touxiangTap"   src="{{tempPathtouxiang}}" mode="aspectFill"></image>
+    </view>
+<view class="btn-box">
+    <button class="save-btn" bindtap="saveTap">保存</button>
+    <button class="quite-btn" bindtap="quitTap">退出登录</button>
+
+</view>
+
+</view>
+
+</view>
+</view>

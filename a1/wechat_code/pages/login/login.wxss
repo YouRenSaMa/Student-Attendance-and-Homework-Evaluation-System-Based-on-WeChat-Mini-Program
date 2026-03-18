@@ -1,0 +1,262 @@
+/* pages/login/login.wxss */
+/* 驼峰转化函数 */
+
+.login-container{
+padding
+:12px 12px 12px 12px;
+background
+:url(http://clfile.zggen.cn/20250106/9fb006aae1a3487e87129419964d27dd.gif) no-repeat center  center / 100% 100%;
+}
+.login-container{
+background-image: url("http://clfile.zggen.cn/20250106/9fb006aae1a3487e87129419964d27dd.gif");
+}
+.content{
+overflow: hidden;
+padding
+:30px 12px 10px 12px;
+margin
+:165px 20px 0 20px;
+border-radius
+:10px;
+background
+:#FFF;
+display
+:block;
+width
+:calc(100% - 40px);
+height
+:auto;
+}
+.avatar{
+width
+:80px;
+margin
+:0 auto 12px auto;
+border-radius
+:4px;
+display
+:none;
+height
+:80px;
+}
+.box{
+width
+:100%;
+margin
+:0 0 12px 0;
+height
+:auto;
+}
+input{
+width:90%!important;
+border
+:0px solid #ffaa33;
+padding
+:0 12px;
+box-shadow
+:0px 4px 4px 0px #000000;
+margin
+:0 0 0 0;
+color
+:#000;
+border-radius
+:4px;
+background
+:#fff;
+width
+:100%;
+font-size
+:14px;
+height
+:44px;
+}
+
+.section {
+padding:0!important;
+border
+:0px solid #ffaa33;
+box-shadow
+:0px 4px 4px 0px #000000;
+padding
+:0 12px;
+margin
+:0 0 30px 0;
+color
+:#000;
+border-radius
+:4px;
+background
+:#fff;
+width
+:100%;
+font-size
+:14px;
+height
+:auto;
+}
+.picker-text{
+width
+:100%;
+line-height
+:44px;
+font-size
+:14px;
+color
+:#E1ABAB;
+max-width: calc(100% - 48rpx)!important;
+padding: 0 24rpx 0 24rpx;
+}
+.login-btn{
+border
+:0;
+padding
+:0 0 0 0;
+box-shadow
+: 0px 4px 4px 0px #000000;
+margin
+:0 0 12px 0;
+color
+:#FFFFFF;
+border-radius
+:5px;
+background
+:linear-gradient(135.00deg, #F3674A 0%,#FFB956 100%);
+width
+:100%;
+line-height
+:44px;
+font-size
+:16px;
+font-weight
+:700;
+height
+:44px;
+}
+.face-btn{
+border
+:0;
+padding
+:0 0 0 0;
+box-shadow
+: 0px 4px 4px 0px #000000;
+margin
+:0 0 12px 0;
+color
+:#FFFFFF;
+border-radius
+:5px;
+background
+:linear-gradient(135.00deg, #F3674A 0%,#FFB956 100%);
+width
+:100%;
+line-height
+:44px;
+font-size
+:16px;
+font-weight
+:700;
+height
+:44px;
+text-align: center;
+}
+.box2{
+width
+:100%;
+margin
+:0 0 12px 0;
+flex-wrap
+:wrap;
+display
+:flex;
+height
+:auto;
+}
+.forgot-password,.face-recognition{
+padding
+:0 4px 0 4px;
+margin
+:10px 0;
+color
+:#8B8B8B;
+text-align
+:center;
+width
+:100%;
+font-size
+:14px;
+text-decoration
+:underline;
+}
+.register-btn{
+padding
+:0 4px 0 4px;
+margin
+:10px 0;
+color
+:#8B8B8B;
+text-align
+:center;
+width
+:100%;
+font-size
+:14px;
+text-decoration
+:underline;
+}
+
+.code-box{
+width
+:100%;
+margin
+:0 0 12px 0;
+position
+:relative;
+flex-wrap
+:wrap;
+display
+:flex;
+height
+:auto;
+}
+.code-input{
+border
+:0px solid #ffaa33;
+padding
+:0 12px;
+box-shadow
+:0px 4px 4px 0px #000000;
+margin
+:0 0 0 0;
+color
+:#000;
+border-radius
+:4px;
+background
+:#fff;
+width
+:100%;
+font-size
+:14px;
+height
+:44px;
+width: calc(100% - 258rpx)!important;
+}
+
+.img-code {
+border: 2rpx solid #eeeeee;
+border-radius: 60rpx;
+height: 88rpx;
+width: 30%;
+display: flex;
+justify-content: center;
+}
+
+#captchaCanvas {
+left: 2rpx;
+font-size: 12px;
+top: -6px;
+padding: 0 20rpx;
+}
+
+
+

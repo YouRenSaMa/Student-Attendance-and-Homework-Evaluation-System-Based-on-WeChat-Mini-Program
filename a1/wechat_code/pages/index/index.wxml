@@ -1,0 +1,108 @@
+<view class="index-container">
+    <view class="content">
+
+
+<swiper indicator-dots="{{false}}" autoplay="{{false}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#00000030'   indicator-active-color="#000000"   autoplay="{{false}}"  circular="{{false}}">
+        <swiper-item class="swiper-item"  wx:for="{{swiperList}}" wx:if="{{index<=2}}" wx:key="index"     >
+            <image src="{{item.img}}" mode="aspectFill"   class="swiper-img" bind:tap="onSwiperTap" data-item="{{item}}" ></image>
+            <view   wx:if="true"  class="swiper-title">{{item.title}}</view>
+        </swiper-item>
+    </swiper>
+        <web-view  wx:if="{{swiperUrl}}" src="{{swiperUrl}}"></web-view>
+<!-- 菜单栏menu -->
+        <view wx:if="{{true}}"   class="grid-box">
+            <view wx:for="{{frontMenuList}}" wx:key="index" class="grid-box-item">
+                <view wx:if="{{item.child.length >1}}" data-item="{{item}}" bind:tap="selectTap">
+                    <text class="iconfont {{item.fontClass}} grid-icon" />
+                    <text class="item-munu">{{item.menu}}</text>
+                </view>
+
+                <view wx:else="" data-item="{{item}}" bind:tap="menuTap">
+                    <text class="iconfont {{item.fontClass}} grid-icon" />
+                    <text class="item-munu">{{item.menu}}</text>
+                </view>
+
+            </view>
+
+
+
+
+        </view>
+
+
+
+
+<view>
+
+</view>
+
+<!-- 商品推荐 -->
+
+<view class="max-list-box">
+
+<view class="goods-list-title-box">
+
+<view class="goods-list-title-text">考勤签到发布</view>
+<text bind:tap="checkMoreTap" data-tablename="kaoqinqiandaofabu"  class="goods-list-title-more" >更多</text>
+</view>
+
+<view class="list-one-box">
+<view class="list-one-item-box" wx:for="{{homekaoqinqiandaofabuList}}"  catchtap="toDetail" data-item="{{item}}"  wx:key="index"       data-tablename="kaoqinqiandaofabu"
+      data-id="{{item.id}}">
+<image class="list-img-one"  src="{{item.kechengtupian}}" mode="aspectFill" />
+<view    class="list-title-one">
+{{item.kechengmingcheng}}
+</view>
+<view    class="list-title-one">
+打卡时间:{{item.dakashijian}}
+</view>
+
+
+</view>
+
+</view>
+
+
+<!--  默认样式9ok-->
+
+</view>
+
+
+
+
+
+
+<view class="max-list-box">
+
+<view class="goods-list-title-box">
+
+<view class="goods-list-title-text">课程作业</view>
+<text bind:tap="checkMoreTap" data-tablename="kechengzuoye"  class="goods-list-title-more" >更多</text>
+</view>
+
+<view class="list-one-box">
+<view class="list-one-item-box" wx:for="{{homekechengzuoyeList}}"  catchtap="toDetail" data-item="{{item}}"  wx:key="index"       data-tablename="kechengzuoye"
+      data-id="{{item.id}}">
+<image class="list-img-one"  src="{{item.fengmian}}" mode="aspectFill" />
+<view    class="list-title-one">
+{{item.zuoyemingcheng}}
+</view>
+
+
+</view>
+
+</view>
+
+
+<!--  默认样式9ok-->
+
+</view>
+
+
+
+
+
+
+
+    </view>
+</view>

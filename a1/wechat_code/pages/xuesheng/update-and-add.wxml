@@ -1,0 +1,45 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">学号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.xuehao==true}}"  placeholder="学号" model:value="{{xuehao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">密码</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.mima==true}}"  placeholder="密码" model:value="{{mima}}" />
+</view>
+<view class="item-box">
+<view class="item-label">学生姓名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.xueshengxingming==true}}"  placeholder="学生姓名" model:value="{{xueshengxingming}}" />
+</view>
+<view class="item-box">
+<view class="item-label">学生手机</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.xueshengshouji==true}}"  placeholder="学生手机" model:value="{{xueshengshouji}}" />
+</view>
+<view class="item-box">
+<view class="item-label">班级</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.banji==true}}"  placeholder="班级" model:value="{{banji}}" />
+</view>
+<view class="item-box"    bindtap="uploadtouxiang">
+<view   class="item-label">头像</view>
+<image  src="{{touxiangPath?touxiangPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+
+</view>
+
+
+<view class="btn-box">
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

@@ -1,0 +1,72 @@
+<view class="detail-container" >
+<view class="content"   bind:tap="authTap">
+<swiper indicator-dots="{{false}}" autoplay="{{false}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#00000030'   indicator-active-color="#000000"   autoplay="{{false}}"  circular="{{false}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"  bindtap="previewImgTap"  data-currenturl="{{baseURL + item}}"  wx:key="index">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">课程名称：</view>
+<view class="detail-item-text">{{detailList.kechengmingcheng}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">打卡时间：</view>
+<view class="detail-item-text">{{detailList.dakashijian}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">规则：</view>
+<view class="detail-item-text">{{detailList.guize}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<view class="operate-box">
+
+<view   wx:if="{{qiandaoisAuthFront}}"  >
+    <button class="common-btn"   data-info="qiandao,'','[1]','你已签到'" bind:tap="onAcrossTap" >
+签到</button>
+</view>
+<view wx:else="">
+    <button class="common-btn" wx:if="{{isAuthqiandao}}"  data-info="qiandao,'','[1]','你已签到'" bind:tap="onAcrossTap" >
+        签到</button>
+</view>
+<view   wx:if="{{weidakashuomingisAuthFront}}"  >
+    <button class="common-btn"   data-info="weidakashuoming,'','',''" bind:tap="onAcrossTap" >
+未打卡说明</button>
+</view>
+<view wx:else="">
+    <button class="common-btn" wx:if="{{isAuthweidakashuoming}}"  data-info="weidakashuoming,'','',''" bind:tap="onAcrossTap" >
+        未打卡说明</button>
+</view>
+
+
+
+
+
+
+
+</view>
+
+</view>
+
+
+
+
+</view>

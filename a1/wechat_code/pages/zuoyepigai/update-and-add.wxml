@@ -1,0 +1,68 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">作业名称</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.zuoyemingcheng==true}}"  placeholder="作业名称" model:value="{{zuoyemingcheng}}" />
+</view>
+<view class="item-box"    bindtap="uploadfengmian">
+<view   class="item-label">封面</view>
+<image  src="{{fengmianPath?fengmianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box">
+<view class="item-label">学号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.xuehao==true}}"  placeholder="学号" model:value="{{xuehao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">学生姓名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.xueshengxingming==true}}"  placeholder="学生姓名" model:value="{{xueshengxingming}}" />
+</view>
+<view class="item-box">
+<view class="item-label">班级</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.banji==true}}"  placeholder="班级" model:value="{{banji}}" />
+</view>
+<view class="item-box"  >
+<view class="item-label">提交时间</view>
+<view class="down-item-picker"  bindtap="ontijiaoshijianTap">
+<view class="item-input" >{{tijiaoshijian}}</view>
+</view>
+</view>
+<com-date isShowPicker="{{showtijiaoshijian}}" bind:dateHandler="tijiaoshijianTap"></com-date>
+<view class="item-box">
+<view class="item-label">作业分数</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.zuoyefenshu==true}}"  placeholder="作业分数" model:value="{{zuoyefenshu}}" />
+</view>
+<view class="item-box">
+<view class="item-label">评价</view>
+<textarea class="item_textarea" model:value="{{pingjia}}" placeholder="评价"     data-info="{{pingjia}}" maxlength="300" id="pingjia"></textarea>
+</view>
+<view class="item-box">
+<view class="item-label" >等级</view>
+<picker   class="down-item-picker"     bindchange="dengjiChange" value="{{dengjiIndex}}"  range="{{dengjiList}}">
+<view class="down-item-picker-text">
+{{dengjiIndex||dengjiIndex==0?dengjiList[dengjiIndex]:"请选择等级"}}
+</view>
+</picker>
+</view>
+<view class="item-box"  >
+<view class="item-label">提交作业内容</view>
+<com-edit class="item_edit"> </com-edit>
+</view>
+
+</view>
+
+
+<view class="btn-box">
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

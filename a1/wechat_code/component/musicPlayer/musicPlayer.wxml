@@ -1,0 +1,63 @@
+<view class="page" wx:if="{{list.length}}">
+    <!-- style="bottom:{{bottomHeight}} + 'px' -->
+		<view class="listBG" wx:if="{{listShow}}" bindtap="close"></view>
+		<view class="list" wx:if="{{listShow}}">
+			<scroll-view :croll-y="true" style="max-height: 60vh;">
+				<view class="music" wx:for="{{list}}" key="index" class="{{musicIndex==index?'musicActive':''}}"
+                bindtap="playListClick" data-index="{{index}}">
+					<view class="left" wx:if="{{musicIndex!=index}}">
+						{{ index + 1}}
+					</view>
+					<view class="left" wx:if="{{musicIndex==index}}">
+						<image src="{{item.tupian?baseUrl + item.tupian.split(',')[0]:'/static/player/plays.jpg'}}" mode="aspectFill"></image>
+					</view>
+					<view class="center">
+						<view class="name">{{item.songname}}</view>
+						<view class="singer">{{item.singer}}</view>
+					</view>
+					<view class="right">
+						<image src="/static/player/shanchu.png" mode="aspectFit" catchtap="delListClick"  style="width: 24px;height: 24px;" data-index="{{index}}"></image>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view class="playView">
+			<view class="playLeft">
+				<image
+					src="{{musicIndex!= -1&&list.length&&list[musicIndex].tupian? baseUrl + list[musicIndex].tupian.split(',')[0]:'/static/player/plays.jpg'}}"
+					mode="aspectFill"></image>
+			</view>
+			<view class="playRight">
+				<view class="top">
+					<view class="info">{{musicIndex!= -1&&list.length ?list[musicIndex].songname:''}} -
+						{{musicIndex != -1&&list.length?list[musicIndex].singer:''}}
+					</view>
+					<view class="play">
+						<image class="bofang" catchtap="playsClick" wx:if="{{!playType}}" src="/static/player/bofang.png"
+							mode="widthFix"></image>
+						<image class="bofang" catchtap="pauseClick" wx:if="{{playType}}" src="/static/player/zanting.png"
+							mode="widthFix"></image>
+				
+<image 
+    class="bofang1" 
+    catchtap="playIndexClick" 
+    data-index="1" 
+    wx:if="{{playIndex===2}}"
+    src="/static/player/danqu.png" 
+    mode="widthFix"
+></image>	<image class="bofang1" catchtap="playIndexClick" data-index="3"  wx:if="{{playIndex==2}}"
+							src="/static/player/xunhuan.png" mode="widthFix"></image>
+						<!-- <image class="bofang1" catchtap="playIndexClick" data-index="1"  wx:if="{{playIndex==3}}"
+							src="/static/player/suiji.png" mode="widthFix"></image>
+						<image class="bofang2" catchtap="listClick" src="/static/player/list.png" mode="widthFix"></image> -->
+					</view>
+				</view>
+
+				<view style="display: flex;align-items: center;">
+					<slider value="{{baifenbi}}" bindchange="sliderChange" min="0" max="100" style="width: 100%;"
+						block-color="#ff0000" :block-size="12" />
+
+				</view>
+			</view>
+		</view>
+	</view>

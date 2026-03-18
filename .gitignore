@@ -1,0 +1,30 @@
+# 默认忽略的文件
+/shelf/
+/workspace.xml
+# 基于编辑器的 HTTP 客户端请求
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# 排除所有编译后的文件
+target/
+*.class
+WEB-INF/classes/
+
+# 排除 Tomcat 和运行环境
+apache-tomcat-*/
+bin/
+logs/
+temp/
+work/
+
+# 排除 IDE 配置文件
+.idea/
+*.iml
+.settings/
+.project/
+
+# 排除大文件和日志
+*.log
+*.zip
+*.tar.gz
